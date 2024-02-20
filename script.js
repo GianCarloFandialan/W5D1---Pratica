@@ -89,7 +89,7 @@ function giveMeRandom(n) {
     } else {
         let array = []
         while (n !== 0) {
-            array.push(parseInt(Math.floor( Math.random())))
+            array.push(parseInt(Math.floor(Math.random()*10)))
             n -= 1
         }
         return array
