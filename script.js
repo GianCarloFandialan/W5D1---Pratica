@@ -49,13 +49,13 @@ console.log(boundary(variabile3));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-/*function reverseString(str) {
+function reverseString(str) {
     let newStr = ""
     for (let i = 0; i < str.length; i++) {
         newStr += str[(str.length-1)-i];
     }
     return newStr
-}*/
+}
 
 let variabile4 = prompt("Dimmi cosa devo invertire", "");
 console.log(reverseString(variabile4));
@@ -89,7 +89,7 @@ function giveMeRandom(n) {
     } else {
         let array = []
         while (n !== 0) {
-            array.push(parseInt(Math.random()*10))
+            array.push(parseInt(Math.floor( Math.random())))
             n -= 1
         }
         return array
@@ -129,7 +129,7 @@ function crazyDiff(n) {
     if (isNaN(Number(n))) {
         return "Non è un numero"
     } else {
-        let differenza = n - 19
+        let differenza = Math.abs(n - 19)
         if (differenza > 19) {
             differenza *= 3
         }
